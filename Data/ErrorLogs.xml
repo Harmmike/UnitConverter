@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ERRORS>
+  <ERROR>
+    <DATE>2020/09/17</DATE>
+    <BODY>test</BODY>
+  </ERROR>
+  <ERROR>
+    <DATE>9/17/2020</DATE>
+    <BODY>Exception of type 'System.Exception' was thrown.</BODY>
+  </ERROR>
+</ERRORS>

@@ -1,0 +1,10 @@
+D:\Repositories\UnitConverter\UnitConverter.Logging\bin\Debug\netstandard2.0\Data\ErrorLogs.xml
+D:\Repositories\UnitConverter\UnitConverter.Logging\bin\Debug\netstandard2.0\UnitConverter.Logging.deps.json
+D:\Repositories\UnitConverter\UnitConverter.Logging\bin\Debug\netstandard2.0\UnitConverter.Logging.dll
+D:\Repositories\UnitConverter\UnitConverter.Logging\bin\Debug\netstandard2.0\UnitConverter.Logging.pdb
+D:\Repositories\UnitConverter\UnitConverter.Logging\obj\Debug\netstandard2.0\UnitConverter.Logging.csprojAssemblyReference.cache
+D:\Repositories\UnitConverter\UnitConverter.Logging\obj\Debug\netstandard2.0\UnitConverter.Logging.csproj.CoreCompileInputs.cache
+D:\Repositories\UnitConverter\UnitConverter.Logging\obj\Debug\netstandard2.0\UnitConverter.Logging.AssemblyInfoInputs.cache
+D:\Repositories\UnitConverter\UnitConverter.Logging\obj\Debug\netstandard2.0\UnitConverter.Logging.AssemblyInfo.cs
+D:\Repositories\UnitConverter\UnitConverter.Logging\obj\Debug\netstandard2.0\UnitConverter.Logging.dll
+D:\Repositories\UnitConverter\UnitConverter.Logging\obj\Debug\netstandard2.0\UnitConverter.Logging.pdb
