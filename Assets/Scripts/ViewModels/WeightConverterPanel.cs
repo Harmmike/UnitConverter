@@ -1,4 +1,9 @@
-﻿public class WeightConverterPanel : ConverterPanel
+﻿using UnityEngine.UI;
+/// <summary>
+/// Class for the Weight Panel. Inherits from ConverterPanel and adds 
+/// initialization for the Converter.
+/// </summary>
+public class WeightConverterPanel : ConverterPanel
 {
     private void Start()
     {
@@ -6,8 +11,15 @@
         _converter.NewResult += OnNewResult;
     }
 
-    public virtual void OnClick_ConvertWeight()
+    public override void OnClick_ConversionSelectionZero()
     {
-        _converter.Convert(userInputField.text);
+        base.OnClick_ConversionSelectionZero();
+        userInputField.placeholder.GetComponent<Text>().text = "Kg";
+    }
+
+    public override void OnClick_ConversionSelectionOne()
+    {
+        base.OnClick_ConversionSelectionOne();
+        userInputField.placeholder.GetComponent<Text>().text = "Lbs";
     }
 }

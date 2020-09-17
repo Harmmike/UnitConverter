@@ -2,14 +2,29 @@
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Main class for Unit Converter application. Contains controls for navigation buttons
+/// as well as the Event being fired for displaying results. Inherits from Monobehaviour and 
+/// must be attached to a game object.
+/// </summary>
 public class Navigator : MonoBehaviour
 {
+    [Header("Parent for Converter Panels")]
+    /// <summary>
+    /// The parent panel for ConverterPanel instantiation. This should have no children objects.
+    /// </summary>
     public GameObject converterPanel;
+
+    [Header("Converter Panel Prefabs")]
+    /// <summary>
+    /// Array of ConverterPanel prefabs. When new panels are created, they MUST be added here.
+    /// </summary>
     public GameObject[] conversionPanels;
 
     public event EventHandler<ResultModel> NewResult;
     public event EventHandler TabOpened;
 
+    #region Button Clicks
     public void OnClick_OpenTempConverter()
     {
         CloseOpenPanel();
@@ -41,7 +56,13 @@ public class Navigator : MonoBehaviour
         var converter = Instantiate(tempPanel, converterPanel.transform).GetComponent<CurrencyConverterPanel>();
         converter.Converted += OnConverted;
     }
+    #endregion
 
+    /// <summary>
+    /// Closes the current open panel by destroying the gameObject.
+    /// This also unsubscribes from the OnConverted event to prevent
+    /// erroneous events and prepare for garbage collection.
+    /// </summary>
     private void CloseOpenPanel()
     {
         var openPanel = converterPanel.GetComponentInChildren<ConverterPanel>();
@@ -55,6 +76,12 @@ public class Navigator : MonoBehaviour
         TabOpened?.Invoke(this, new EventArgs());
     }
 
+    /// <summary>
+    /// Raises the Converted event to notify the ResultPanel that a new
+    /// result is available to display.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="result"></param>
     private void OnConverted(object sender, ResultModel result)
     {
         NewResult?.Invoke(this, result);

@@ -1,5 +1,8 @@
-﻿using UnityEngine;
-
+﻿using UnityEngine.UI;
+/// <summary>
+/// Class for the Currency Panel. Inherits from ConverterPanel and adds 
+/// initialization for the Converter.
+/// </summary>
 public class CurrencyConverterPanel : ConverterPanel
 {
     private void Start()
@@ -8,8 +11,15 @@ public class CurrencyConverterPanel : ConverterPanel
         _converter.NewResult += OnNewResult;
     }
 
-    public void OnClick_ConvertCurrency()
+    public override void OnClick_ConversionSelectionZero()
     {
-        _converter.Convert(userInputField.text);
+        base.OnClick_ConversionSelectionZero();
+        userInputField.placeholder.GetComponent<Text>().text = "USD";
+    }
+
+    public override void OnClick_ConversionSelectionOne()
+    {
+        base.OnClick_ConversionSelectionOne();
+        userInputField.placeholder.GetComponent<Text>().text = "RMB";
     }
 }
